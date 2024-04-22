@@ -1,0 +1,586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C7EEBA52BD646A0004AF1F0 /* RaggyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7EEBA42BD646A0004AF1F0 /* RaggyApp.swift */; };
+		0C7EEBA72BD646A0004AF1F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7EEBA62BD646A0004AF1F0 /* ContentView.swift */; };
+		0C7EEBA92BD646A1004AF1F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C7EEBA82BD646A1004AF1F0 /* Assets.xcassets */; };
+		0C7EEBAC2BD646A1004AF1F0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C7EEBAB2BD646A1004AF1F0 /* Preview Assets.xcassets */; };
+		0C7EEBB72BD646A1004AF1F0 /* RaggyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7EEBB62BD646A1004AF1F0 /* RaggyTests.swift */; };
+		0C7EEBC12BD646A1004AF1F0 /* RaggyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7EEBC02BD646A1004AF1F0 /* RaggyUITests.swift */; };
+		0C7EEBC32BD646A1004AF1F0 /* RaggyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7EEBC22BD646A1004AF1F0 /* RaggyUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0C7EEBB32BD646A1004AF1F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C7EEB992BD646A0004AF1F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C7EEBA02BD646A0004AF1F0;
+			remoteInfo = Raggy;
+		};
+		0C7EEBBD2BD646A1004AF1F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C7EEB992BD646A0004AF1F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C7EEBA02BD646A0004AF1F0;
+			remoteInfo = Raggy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C7EEBA12BD646A0004AF1F0 /* Raggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Raggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C7EEBA42BD646A0004AF1F0 /* RaggyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaggyApp.swift; sourceTree = "<group>"; };
+		0C7EEBA62BD646A0004AF1F0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0C7EEBA82BD646A1004AF1F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0C7EEBAB2BD646A1004AF1F0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0C7EEBAD2BD646A1004AF1F0 /* Raggy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Raggy.entitlements; sourceTree = "<group>"; };
+		0C7EEBB22BD646A1004AF1F0 /* RaggyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaggyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C7EEBB62BD646A1004AF1F0 /* RaggyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaggyTests.swift; sourceTree = "<group>"; };
+		0C7EEBBC2BD646A1004AF1F0 /* RaggyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaggyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C7EEBC02BD646A1004AF1F0 /* RaggyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaggyUITests.swift; sourceTree = "<group>"; };
+		0C7EEBC22BD646A1004AF1F0 /* RaggyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaggyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0C7EEB9E2BD646A0004AF1F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C7EEBAF2BD646A1004AF1F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C7EEBB92BD646A1004AF1F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C7EEB982BD646A0004AF1F0 = {
+			isa = PBXGroup;
+			children = (
+				0C7EEBA32BD646A0004AF1F0 /* Raggy */,
+				0C7EEBB52BD646A1004AF1F0 /* RaggyTests */,
+				0C7EEBBF2BD646A1004AF1F0 /* RaggyUITests */,
+				0C7EEBA22BD646A0004AF1F0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0C7EEBA22BD646A0004AF1F0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0C7EEBA12BD646A0004AF1F0 /* Raggy.app */,
+				0C7EEBB22BD646A1004AF1F0 /* RaggyTests.xctest */,
+				0C7EEBBC2BD646A1004AF1F0 /* RaggyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0C7EEBA32BD646A0004AF1F0 /* Raggy */ = {
+			isa = PBXGroup;
+			children = (
+				0C7EEBA42BD646A0004AF1F0 /* RaggyApp.swift */,
+				0C7EEBA62BD646A0004AF1F0 /* ContentView.swift */,
+				0C7EEBA82BD646A1004AF1F0 /* Assets.xcassets */,
+				0C7EEBAD2BD646A1004AF1F0 /* Raggy.entitlements */,
+				0C7EEBAA2BD646A1004AF1F0 /* Preview Content */,
+			);
+			path = Raggy;
+			sourceTree = "<group>";
+		};
+		0C7EEBAA2BD646A1004AF1F0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0C7EEBAB2BD646A1004AF1F0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0C7EEBB52BD646A1004AF1F0 /* RaggyTests */ = {
+			isa = PBXGroup;
+			children = (
+				0C7EEBB62BD646A1004AF1F0 /* RaggyTests.swift */,
+			);
+			path = RaggyTests;
+			sourceTree = "<group>";
+		};
+		0C7EEBBF2BD646A1004AF1F0 /* RaggyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0C7EEBC02BD646A1004AF1F0 /* RaggyUITests.swift */,
+				0C7EEBC22BD646A1004AF1F0 /* RaggyUITestsLaunchTests.swift */,
+			);
+			path = RaggyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0C7EEBA02BD646A0004AF1F0 /* Raggy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C7EEBC62BD646A1004AF1F0 /* Build configuration list for PBXNativeTarget "Raggy" */;
+			buildPhases = (
+				0C7EEB9D2BD646A0004AF1F0 /* Sources */,
+				0C7EEB9E2BD646A0004AF1F0 /* Frameworks */,
+				0C7EEB9F2BD646A0004AF1F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Raggy;
+			productName = Raggy;
+			productReference = 0C7EEBA12BD646A0004AF1F0 /* Raggy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0C7EEBB12BD646A1004AF1F0 /* RaggyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C7EEBC92BD646A1004AF1F0 /* Build configuration list for PBXNativeTarget "RaggyTests" */;
+			buildPhases = (
+				0C7EEBAE2BD646A1004AF1F0 /* Sources */,
+				0C7EEBAF2BD646A1004AF1F0 /* Frameworks */,
+				0C7EEBB02BD646A1004AF1F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C7EEBB42BD646A1004AF1F0 /* PBXTargetDependency */,
+			);
+			name = RaggyTests;
+			productName = RaggyTests;
+			productReference = 0C7EEBB22BD646A1004AF1F0 /* RaggyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0C7EEBBB2BD646A1004AF1F0 /* RaggyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C7EEBCC2BD646A1004AF1F0 /* Build configuration list for PBXNativeTarget "RaggyUITests" */;
+			buildPhases = (
+				0C7EEBB82BD646A1004AF1F0 /* Sources */,
+				0C7EEBB92BD646A1004AF1F0 /* Frameworks */,
+				0C7EEBBA2BD646A1004AF1F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C7EEBBE2BD646A1004AF1F0 /* PBXTargetDependency */,
+			);
+			name = RaggyUITests;
+			productName = RaggyUITests;
+			productReference = 0C7EEBBC2BD646A1004AF1F0 /* RaggyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0C7EEB992BD646A0004AF1F0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					0C7EEBA02BD646A0004AF1F0 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					0C7EEBB12BD646A1004AF1F0 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 0C7EEBA02BD646A0004AF1F0;
+					};
+					0C7EEBBB2BD646A1004AF1F0 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 0C7EEBA02BD646A0004AF1F0;
+					};
+				};
+			};
+			buildConfigurationList = 0C7EEB9C2BD646A0004AF1F0 /* Build configuration list for PBXProject "Raggy" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0C7EEB982BD646A0004AF1F0;
+			productRefGroup = 0C7EEBA22BD646A0004AF1F0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0C7EEBA02BD646A0004AF1F0 /* Raggy */,
+				0C7EEBB12BD646A1004AF1F0 /* RaggyTests */,
+				0C7EEBBB2BD646A1004AF1F0 /* RaggyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0C7EEB9F2BD646A0004AF1F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C7EEBAC2BD646A1004AF1F0 /* Preview Assets.xcassets in Resources */,
+				0C7EEBA92BD646A1004AF1F0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C7EEBB02BD646A1004AF1F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C7EEBBA2BD646A1004AF1F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0C7EEB9D2BD646A0004AF1F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C7EEBA72BD646A0004AF1F0 /* ContentView.swift in Sources */,
+				0C7EEBA52BD646A0004AF1F0 /* RaggyApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C7EEBAE2BD646A1004AF1F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C7EEBB72BD646A1004AF1F0 /* RaggyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C7EEBB82BD646A1004AF1F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C7EEBC12BD646A1004AF1F0 /* RaggyUITests.swift in Sources */,
+				0C7EEBC32BD646A1004AF1F0 /* RaggyUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0C7EEBB42BD646A1004AF1F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C7EEBA02BD646A0004AF1F0 /* Raggy */;
+			targetProxy = 0C7EEBB32BD646A1004AF1F0 /* PBXContainerItemProxy */;
+		};
+		0C7EEBBE2BD646A1004AF1F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C7EEBA02BD646A0004AF1F0 /* Raggy */;
+			targetProxy = 0C7EEBBD2BD646A1004AF1F0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0C7EEBC42BD646A1004AF1F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0C7EEBC52BD646A1004AF1F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		0C7EEBC72BD646A1004AF1F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Raggy/Raggy.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Raggy/Preview Content\"";
+				DEVELOPMENT_TEAM = 93FS655XT4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ChanHe.Raggy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0C7EEBC82BD646A1004AF1F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Raggy/Raggy.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Raggy/Preview Content\"";
+				DEVELOPMENT_TEAM = 93FS655XT4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ChanHe.Raggy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		0C7EEBCA2BD646A1004AF1F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 93FS655XT4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ChanHe.RaggyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Raggy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Raggy";
+			};
+			name = Debug;
+		};
+		0C7EEBCB2BD646A1004AF1F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 93FS655XT4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ChanHe.RaggyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Raggy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Raggy";
+			};
+			name = Release;
+		};
+		0C7EEBCD2BD646A1004AF1F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 93FS655XT4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ChanHe.RaggyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Raggy;
+			};
+			name = Debug;
+		};
+		0C7EEBCE2BD646A1004AF1F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 93FS655XT4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ChanHe.RaggyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Raggy;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0C7EEB9C2BD646A0004AF1F0 /* Build configuration list for PBXProject "Raggy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C7EEBC42BD646A1004AF1F0 /* Debug */,
+				0C7EEBC52BD646A1004AF1F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C7EEBC62BD646A1004AF1F0 /* Build configuration list for PBXNativeTarget "Raggy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C7EEBC72BD646A1004AF1F0 /* Debug */,
+				0C7EEBC82BD646A1004AF1F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C7EEBC92BD646A1004AF1F0 /* Build configuration list for PBXNativeTarget "RaggyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C7EEBCA2BD646A1004AF1F0 /* Debug */,
+				0C7EEBCB2BD646A1004AF1F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C7EEBCC2BD646A1004AF1F0 /* Build configuration list for PBXNativeTarget "RaggyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C7EEBCD2BD646A1004AF1F0 /* Debug */,
+				0C7EEBCE2BD646A1004AF1F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0C7EEB992BD646A0004AF1F0 /* Project object */;
+}
