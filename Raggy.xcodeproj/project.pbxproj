@@ -11,27 +11,8 @@
 		0C7EEBA72BD646A0004AF1F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7EEBA62BD646A0004AF1F0 /* ContentView.swift */; };
 		0C7EEBA92BD646A1004AF1F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C7EEBA82BD646A1004AF1F0 /* Assets.xcassets */; };
 		0C7EEBAC2BD646A1004AF1F0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C7EEBAB2BD646A1004AF1F0 /* Preview Assets.xcassets */; };
-		0C7EEBB72BD646A1004AF1F0 /* RaggyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7EEBB62BD646A1004AF1F0 /* RaggyTests.swift */; };
-		0C7EEBC12BD646A1004AF1F0 /* RaggyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7EEBC02BD646A1004AF1F0 /* RaggyUITests.swift */; };
-		0C7EEBC32BD646A1004AF1F0 /* RaggyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7EEBC22BD646A1004AF1F0 /* RaggyUITestsLaunchTests.swift */; };
+		C0D3F0022BD8000000000001 /* RaggyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D3F0012BD8000000000001 /* RaggyViewModel.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		0C7EEBB32BD646A1004AF1F0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0C7EEB992BD646A0004AF1F0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0C7EEBA02BD646A0004AF1F0;
-			remoteInfo = Raggy;
-		};
-		0C7EEBBD2BD646A1004AF1F0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0C7EEB992BD646A0004AF1F0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0C7EEBA02BD646A0004AF1F0;
-			remoteInfo = Raggy;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0C7EEBA12BD646A0004AF1F0 /* Raggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Raggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,29 +21,11 @@
 		0C7EEBA82BD646A1004AF1F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C7EEBAB2BD646A1004AF1F0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0C7EEBAD2BD646A1004AF1F0 /* Raggy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Raggy.entitlements; sourceTree = "<group>"; };
-		0C7EEBB22BD646A1004AF1F0 /* RaggyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaggyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C7EEBB62BD646A1004AF1F0 /* RaggyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaggyTests.swift; sourceTree = "<group>"; };
-		0C7EEBBC2BD646A1004AF1F0 /* RaggyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaggyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C7EEBC02BD646A1004AF1F0 /* RaggyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaggyUITests.swift; sourceTree = "<group>"; };
-		0C7EEBC22BD646A1004AF1F0 /* RaggyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaggyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C0D3F0012BD8000000000001 /* RaggyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaggyViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0C7EEB9E2BD646A0004AF1F0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0C7EEBAF2BD646A1004AF1F0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0C7EEBB92BD646A1004AF1F0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,8 +39,6 @@
 			isa = PBXGroup;
 			children = (
 				0C7EEBA32BD646A0004AF1F0 /* Raggy */,
-				0C7EEBB52BD646A1004AF1F0 /* RaggyTests */,
-				0C7EEBBF2BD646A1004AF1F0 /* RaggyUITests */,
 				0C7EEBA22BD646A0004AF1F0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,8 +47,6 @@
 			isa = PBXGroup;
 			children = (
 				0C7EEBA12BD646A0004AF1F0 /* Raggy.app */,
-				0C7EEBB22BD646A1004AF1F0 /* RaggyTests.xctest */,
-				0C7EEBBC2BD646A1004AF1F0 /* RaggyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				0C7EEBA42BD646A0004AF1F0 /* RaggyApp.swift */,
+				C0D3F0012BD8000000000001 /* RaggyViewModel.swift */,
 				0C7EEBA62BD646A0004AF1F0 /* ContentView.swift */,
 				0C7EEBA82BD646A1004AF1F0 /* Assets.xcassets */,
 				0C7EEBAD2BD646A1004AF1F0 /* Raggy.entitlements */,
@@ -110,23 +70,6 @@
 				0C7EEBAB2BD646A1004AF1F0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		0C7EEBB52BD646A1004AF1F0 /* RaggyTests */ = {
-			isa = PBXGroup;
-			children = (
-				0C7EEBB62BD646A1004AF1F0 /* RaggyTests.swift */,
-			);
-			path = RaggyTests;
-			sourceTree = "<group>";
-		};
-		0C7EEBBF2BD646A1004AF1F0 /* RaggyUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0C7EEBC02BD646A1004AF1F0 /* RaggyUITests.swift */,
-				0C7EEBC22BD646A1004AF1F0 /* RaggyUITestsLaunchTests.swift */,
-			);
-			path = RaggyUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,42 +92,6 @@
 			productReference = 0C7EEBA12BD646A0004AF1F0 /* Raggy.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0C7EEBB12BD646A1004AF1F0 /* RaggyTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0C7EEBC92BD646A1004AF1F0 /* Build configuration list for PBXNativeTarget "RaggyTests" */;
-			buildPhases = (
-				0C7EEBAE2BD646A1004AF1F0 /* Sources */,
-				0C7EEBAF2BD646A1004AF1F0 /* Frameworks */,
-				0C7EEBB02BD646A1004AF1F0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0C7EEBB42BD646A1004AF1F0 /* PBXTargetDependency */,
-			);
-			name = RaggyTests;
-			productName = RaggyTests;
-			productReference = 0C7EEBB22BD646A1004AF1F0 /* RaggyTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		0C7EEBBB2BD646A1004AF1F0 /* RaggyUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0C7EEBCC2BD646A1004AF1F0 /* Build configuration list for PBXNativeTarget "RaggyUITests" */;
-			buildPhases = (
-				0C7EEBB82BD646A1004AF1F0 /* Sources */,
-				0C7EEBB92BD646A1004AF1F0 /* Frameworks */,
-				0C7EEBBA2BD646A1004AF1F0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0C7EEBBE2BD646A1004AF1F0 /* PBXTargetDependency */,
-			);
-			name = RaggyUITests;
-			productName = RaggyUITests;
-			productReference = 0C7EEBBC2BD646A1004AF1F0 /* RaggyUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,14 +104,6 @@
 				TargetAttributes = {
 					0C7EEBA02BD646A0004AF1F0 = {
 						CreatedOnToolsVersion = 15.3;
-					};
-					0C7EEBB12BD646A1004AF1F0 = {
-						CreatedOnToolsVersion = 15.3;
-						TestTargetID = 0C7EEBA02BD646A0004AF1F0;
-					};
-					0C7EEBBB2BD646A1004AF1F0 = {
-						CreatedOnToolsVersion = 15.3;
-						TestTargetID = 0C7EEBA02BD646A0004AF1F0;
 					};
 				};
 			};
@@ -222,8 +121,6 @@
 			projectRoot = "";
 			targets = (
 				0C7EEBA02BD646A0004AF1F0 /* Raggy */,
-				0C7EEBB12BD646A1004AF1F0 /* RaggyTests */,
-				0C7EEBBB2BD646A1004AF1F0 /* RaggyUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -238,20 +135,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0C7EEBB02BD646A1004AF1F0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0C7EEBBA2BD646A1004AF1F0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -261,40 +144,11 @@
 			files = (
 				0C7EEBA72BD646A0004AF1F0 /* ContentView.swift in Sources */,
 				0C7EEBA52BD646A0004AF1F0 /* RaggyApp.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0C7EEBAE2BD646A1004AF1F0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0C7EEBB72BD646A1004AF1F0 /* RaggyTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0C7EEBB82BD646A1004AF1F0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0C7EEBC12BD646A1004AF1F0 /* RaggyUITests.swift in Sources */,
-				0C7EEBC32BD646A1004AF1F0 /* RaggyUITestsLaunchTests.swift in Sources */,
+				C0D3F0022BD8000000000001 /* RaggyViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		0C7EEBB42BD646A1004AF1F0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0C7EEBA02BD646A0004AF1F0 /* Raggy */;
-			targetProxy = 0C7EEBB32BD646A1004AF1F0 /* PBXContainerItemProxy */;
-		};
-		0C7EEBBE2BD646A1004AF1F0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0C7EEBA02BD646A0004AF1F0 /* Raggy */;
-			targetProxy = 0C7EEBBD2BD646A1004AF1F0 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0C7EEBC42BD646A1004AF1F0 /* Debug */ = {
@@ -469,78 +323,6 @@
 			};
 			name = Release;
 		};
-		0C7EEBCA2BD646A1004AF1F0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 93FS655XT4;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ChanHe.RaggyTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Raggy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Raggy";
-			};
-			name = Debug;
-		};
-		0C7EEBCB2BD646A1004AF1F0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 93FS655XT4;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ChanHe.RaggyTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Raggy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Raggy";
-			};
-			name = Release;
-		};
-		0C7EEBCD2BD646A1004AF1F0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 93FS655XT4;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ChanHe.RaggyUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = Raggy;
-			};
-			name = Debug;
-		};
-		0C7EEBCE2BD646A1004AF1F0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 93FS655XT4;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ChanHe.RaggyUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = Raggy;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -558,24 +340,6 @@
 			buildConfigurations = (
 				0C7EEBC72BD646A1004AF1F0 /* Debug */,
 				0C7EEBC82BD646A1004AF1F0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0C7EEBC92BD646A1004AF1F0 /* Build configuration list for PBXNativeTarget "RaggyTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0C7EEBCA2BD646A1004AF1F0 /* Debug */,
-				0C7EEBCB2BD646A1004AF1F0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0C7EEBCC2BD646A1004AF1F0 /* Build configuration list for PBXNativeTarget "RaggyUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0C7EEBCD2BD646A1004AF1F0 /* Debug */,
-				0C7EEBCE2BD646A1004AF1F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
