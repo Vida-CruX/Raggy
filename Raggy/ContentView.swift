@@ -1,35 +1,31 @@
 import SwiftUI
 
+enum PermissionWindowMetrics {
+    static let panelWidth: CGFloat = 560
+    static let panelHeight: CGFloat = 412
+    static let contentSize = CGSize(width: panelWidth, height: panelHeight)
+}
+
 struct PermissionView: View {
     let onRequestPermission: () -> Void
     let onCheckPermission: () -> Void
     let onQuit: () -> Void
 
     var body: some View {
-        ZStack {
-            PermissionBackdrop()
+        VStack(alignment: .leading, spacing: 24) {
+            header
+            permissionCopy
+            permissionRows
 
-            VStack(alignment: .leading, spacing: 24) {
-                header
-                permissionCopy
-                permissionRows
+            Divider()
+                .overlay(Color.white.opacity(0.16))
 
-                Divider()
-                    .overlay(Color.white.opacity(0.16))
-
-                actions
-            }
-            .padding(30)
-            .frame(width: 560)
-            .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 8, style: .continuous))
-            .overlay {
-                RoundedRectangle(cornerRadius: 8, style: .continuous)
-                    .strokeBorder(.white.opacity(0.14), lineWidth: 1)
-            }
-            .shadow(color: .black.opacity(0.22), radius: 34, y: 18)
-            .padding(26)
+            actions
         }
-        .frame(minWidth: 620, minHeight: 420)
+        .padding(30)
+        .frame(width: PermissionWindowMetrics.panelWidth, height: PermissionWindowMetrics.panelHeight)
+        .background(PermissionPanelBackground())
+        .fixedSize()
     }
 
     private var header: some View {
@@ -104,63 +100,136 @@ struct PermissionView: View {
     }
 }
 
-struct CleaningView: View {
-    let onExit: () -> Void
-
+private struct PermissionPanelBackground: View {
     var body: some View {
-        ZStack(alignment: .topTrailing) {
-            Color.black
-                .ignoresSafeArea()
+        ZStack {
+            Rectangle()
+                .fill(.regularMaterial)
 
-            BloomCleaningAnimation()
-                .ignoresSafeArea()
-
-            VStack(alignment: .leading, spacing: 8) {
-                Text("Raggy")
-                    .font(.system(size: 20, weight: .semibold, design: .rounded))
-
-                Text("Cleaning mode")
-                    .font(.caption.weight(.medium))
-                    .foregroundStyle(.white.opacity(0.48))
-            }
-            .foregroundStyle(.white.opacity(0.82))
-            .padding(28)
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-            .allowsHitTesting(false)
-
-            Button(action: onExit) {
-                Label("Exit Raggy", systemImage: "xmark")
-            }
-            .buttonStyle(ExitButtonStyle())
-            .padding(24)
-            .accessibilityIdentifier("exitButton")
+            Rectangle()
+                .fill(
+                    LinearGradient(
+                        colors: [
+                            Color.mint.opacity(0.11),
+                            Color(nsColor: .windowBackgroundColor).opacity(0.70),
+                            Color.cyan.opacity(0.08)
+                        ],
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    )
+                )
         }
     }
 }
 
-private struct PermissionBackdrop: View {
+struct CleaningView: View {
+    private static let cleaningTips = [
+        "Use a soft, lint-free cloth lightly dampened with water for the exterior.",
+        "Keep moisture away from ports, vents, keyboard gaps, and other openings.",
+        "Clean the screen with water only on a soft, lint-free cloth.",
+        "Never spray liquid directly onto your Mac.",
+        "Skip aerosol sprays, solvents, abrasives, bleach, and hydrogen peroxide cleaners.",
+        "For stubborn smudges, gently wipe with a cloth moistened with 70% isopropyl alcohol.",
+        "Clean Touch Bar and Touch ID surfaces like the display: shut down, unplug, then use a water-dampened lint-free cloth.",
+        "For nano-texture displays, use the Apple polishing cloth instead of a regular cloth.",
+        "If the nano-texture cloth gets dirty, hand-wash it with dish soap and water, then air-dry it for 24 hours."
+    ]
+
+    let onExit: () -> Void
+    @State private var cleaningTip: String
+
+    init(onExit: @escaping () -> Void) {
+        self.onExit = onExit
+        _cleaningTip = State(initialValue: Self.cleaningTips.randomElement() ?? Self.cleaningTips[0])
+    }
+
     var body: some View {
         ZStack {
-            LinearGradient(
-                colors: [
-                    Color(nsColor: .windowBackgroundColor),
-                    Color(red: 0.05, green: 0.08, blue: 0.09)
-                ],
-                startPoint: .top,
-                endPoint: .bottom
-            )
+            Color.black
+                .ignoresSafeArea()
 
-            LinearGradient(
-                colors: [
-                    Color.mint.opacity(0.18),
-                    Color.clear,
-                    Color.cyan.opacity(0.10)
-                ],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
+            centeredActions
         }
-        .ignoresSafeArea()
+    }
+
+    private var centeredActions: some View {
+        VStack(spacing: 16) {
+//			AnimatedBroomIcon()
+//				.accessibilityHidden(true)
+            Button(action: onExit) {
+                Label("Exit Raggy", systemImage: "xmark")
+            }
+            .buttonStyle(ExitButtonStyle())
+            .accessibilityIdentifier("exitButton")
+
+            VStack(spacing: 8) {
+                
+
+                Text(cleaningTip)
+                    .font(.caption2.weight(.medium))
+                    .lineSpacing(2)
+                    .foregroundStyle(.white.opacity(0.58))
+                    .multilineTextAlignment(.center)
+                    .frame(maxWidth: 340)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .accessibilityLabel("Cleaning tip: \(cleaningTip)")
+            }
+        }
+        .padding(.horizontal, 28)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+    }
+}
+
+private struct AnimatedBroomIcon: View {
+    @State private var isSweeping = false
+
+    var body: some View {
+        ZStack {
+            broom
+                .rotationEffect(.degrees(isSweeping ? -10 : 10), anchor: .bottom)
+                .offset(x: isSweeping ? -5 : 5, y: isSweeping ? 1 : -1)
+
+            sparkle
+                .offset(x: isSweeping ? 16 : -16, y: 16)
+                .opacity(isSweeping ? 0.82 : 0.34)
+                .scaleEffect(isSweeping ? 1 : 0.72)
+        }
+        .frame(width: 58, height: 58)
+        .onAppear {
+            withAnimation(.easeInOut(duration: 1.15).repeatForever(autoreverses: true)) {
+                isSweeping = true
+            }
+        }
+    }
+
+    private var broom: some View {
+        ZStack {
+            Capsule()
+                .fill(Color.white.opacity(0.78))
+                .frame(width: 5, height: 42)
+                .offset(y: -8)
+
+            RoundedRectangle(cornerRadius: 5, style: .continuous)
+                .fill(Color.mint.opacity(0.72))
+                .frame(width: 24, height: 18)
+                .offset(y: 15)
+
+            HStack(spacing: 3) {
+                ForEach(0..<4) { _ in
+                    Capsule()
+                        .fill(Color.white.opacity(0.50))
+                        .frame(width: 2, height: 12)
+                }
+            }
+            .offset(y: 21)
+        }
+        .rotationEffect(.degrees(-32))
+    }
+
+    private var sparkle: some View {
+        Image(systemName: "sparkle")
+            .font(.system(size: 12, weight: .semibold))
+            .foregroundStyle(.mint.opacity(0.80))
     }
 }
 
@@ -207,73 +276,6 @@ private struct PermissionRow: View {
                     .fixedSize(horizontal: false, vertical: true)
             }
         }
-    }
-}
-
-private struct BloomCleaningAnimation: View {
-    @State private var isBlooming = false
-
-    var body: some View {
-        GeometryReader { proxy in
-            let width = proxy.size.width
-            let height = proxy.size.height
-            let bloomSize = min(max(width, height) * 0.42, 620)
-
-            ZStack {
-                sweepLine(in: proxy.size)
-
-                Circle()
-                    .fill(
-                        RadialGradient(
-                            colors: [
-                                Color.white.opacity(0.20),
-                                Color.mint.opacity(0.08),
-                                Color.clear
-                            ],
-                            center: .center,
-                            startRadius: 1,
-                            endRadius: bloomSize * 0.5
-                        )
-                    )
-                    .frame(width: bloomSize, height: bloomSize)
-                    .blur(radius: 34)
-                    .scaleEffect(isBlooming ? 1.12 : 0.74)
-                    .opacity(isBlooming ? 0.32 : 0.12)
-                    .position(
-                        x: isBlooming ? width * 0.72 : width * 0.28,
-                        y: isBlooming ? height * 0.34 : height * 0.68
-                    )
-                    .blendMode(.screen)
-            }
-            .onAppear {
-                withAnimation(.easeInOut(duration: 5.6).repeatForever(autoreverses: true)) {
-                    isBlooming = true
-                }
-            }
-        }
-        .allowsHitTesting(false)
-    }
-
-    private func sweepLine(in size: CGSize) -> some View {
-        Rectangle()
-            .fill(
-                LinearGradient(
-                    colors: [
-                        Color.clear,
-                        Color.white.opacity(0.08),
-                        Color.mint.opacity(0.05),
-                        Color.clear
-                    ],
-                    startPoint: .leading,
-                    endPoint: .trailing
-                )
-            )
-            .frame(width: max(size.width, size.height) * 1.4, height: 2)
-            .blur(radius: 5)
-            .rotationEffect(.degrees(-23))
-            .offset(x: isBlooming ? size.width * 0.18 : -size.width * 0.18)
-            .opacity(isBlooming ? 1 : 0.35)
-            .blendMode(.screen)
     }
 }
 
