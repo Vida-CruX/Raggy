@@ -149,18 +149,44 @@ private final class FullScreenConfigurationView: NSView {
         DispatchQueue.main.async { [weak self, weak window] in
             guard let self, let window, self.window === window else { return }
 
-            window.minSize = NSSize(width: 1, height: 1)
-            window.maxSize = NSSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)
-            window.styleMask.insert(.resizable)
-            window.isOpaque = true
-            window.backgroundColor = .black
-            window.hasShadow = true
-            window.collectionBehavior.insert(.fullScreenPrimary)
-            window.makeKeyAndOrderFront(nil)
+            self.configure(window)
+            self.requestFullScreen(for: window)
+        }
+    }
 
-            if !window.styleMask.contains(.fullScreen) {
-                window.toggleFullScreen(nil)
-            }
+    private func configure(_ window: NSWindow) {
+        window.title = "Raggy"
+        window.titleVisibility = .hidden
+        window.titlebarAppearsTransparent = true
+        window.isMovableByWindowBackground = false
+        window.isOpaque = true
+        window.backgroundColor = .black
+        window.hasShadow = true
+
+        window.minSize = NSSize(width: 1, height: 1)
+        window.maxSize = NSSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)
+        window.styleMask.insert(.resizable)
+        window.styleMask.insert(.fullSizeContentView)
+        window.collectionBehavior.insert(.fullScreenPrimary)
+
+        [
+            NSWindow.ButtonType.closeButton,
+            .miniaturizeButton,
+            .zoomButton
+        ].forEach { button in
+            window.standardWindowButton(button)?.isHidden = true
+        }
+    }
+
+    private func requestFullScreen(for window: NSWindow) {
+        NSApplication.shared.activate(ignoringOtherApps: true)
+        window.makeKeyAndOrderFront(nil)
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self, weak window] in
+            guard let self, let window, self.window === window else { return }
+            guard !window.styleMask.contains(.fullScreen) else { return }
+
+            window.toggleFullScreen(nil)
         }
     }
 }

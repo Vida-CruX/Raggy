@@ -4,5 +4,10 @@
 <dict>
 	<key>com.apple.security.app-sandbox</key>
 	<true/>
+	<key>com.apple.security.temporary-exception.shared-preference.read-write</key>
+	<array>
+		<string>com.apple.AppleMultitouchTrackpad</string>
+		<string>com.apple.driver.AppleBluetoothMultitouch.trackpad</string>
+	</array>
 </dict>
 </plist>
