@@ -1,5 +1,6 @@
 import SwiftUI
 import ApplicationServices
+import Foundation
 
 @MainActor
 final class RaggyController: ObservableObject {
@@ -7,6 +8,7 @@ final class RaggyController: ObservableObject {
 
     private let isRunningForPreview: Bool
     private let keyboardBlocker = KeyboardBlocker()
+    private let notificationCenterGestureBlocker = NotificationCenterGestureBlocker()
     private var permissionPollTask: Task<Void, Never>?
     private var isCleaningModeActive = false
 
@@ -40,6 +42,7 @@ final class RaggyController: ObservableObject {
         ]
 
         isCleaningModeActive = true
+        notificationCenterGestureBlocker.start()
         keyboardBlocker.start()
     }
 
@@ -47,6 +50,7 @@ final class RaggyController: ObservableObject {
         guard !isRunningForPreview else { return }
 
         keyboardBlocker.stop()
+        notificationCenterGestureBlocker.stop()
         NSApplication.shared.presentationOptions = []
         isCleaningModeActive = false
     }
@@ -96,6 +100,97 @@ final class RaggyController: ObservableObject {
         }
 
         NSWorkspace.shared.open(url)
+    }
+}
+
+private final class NotificationCenterGestureBlocker {
+    private struct PreferenceSnapshot {
+        let domain: String
+        let value: CFPropertyList?
+    }
+
+    private static let preferenceKey = "TrackpadTwoFingerFromRightEdgeSwipeGesture"
+    private static let disabledValue = NSNumber(value: 0)
+    private static let domains = [
+        "com.apple.AppleMultitouchTrackpad",
+        "com.apple.driver.AppleBluetoothMultitouch.trackpad"
+    ]
+    private static let changeNotifications = [
+        "com.apple.AppleMultitouchTrackpadDomainDidChangeNotification",
+        "com.apple.AppleMenuGesturesDidChangeNotification",
+        "com.apple.IOTrackpadPropertyDidChangeNotification"
+    ]
+
+    private var snapshots: [PreferenceSnapshot] = []
+    private var isBlocking = false
+
+    deinit {
+        stop()
+    }
+
+    func start() {
+        guard !isBlocking else { return }
+
+        snapshots = Self.domains.map { domain in
+            PreferenceSnapshot(
+                domain: domain,
+                value: Self.preferenceValue(in: domain)
+            )
+        }
+
+        Self.domains.forEach { domain in
+            Self.setPreferenceValue(Self.disabledValue, in: domain)
+        }
+
+        Self.notifyPreferenceChanges()
+        isBlocking = true
+    }
+
+    func stop() {
+        guard isBlocking else { return }
+
+        snapshots.forEach { snapshot in
+            Self.setPreferenceValue(snapshot.value, in: snapshot.domain)
+        }
+
+        snapshots.removeAll()
+        Self.notifyPreferenceChanges()
+        isBlocking = false
+    }
+
+    private static func preferenceValue(in domain: String) -> CFPropertyList? {
+        CFPreferencesCopyValue(
+            preferenceKey as CFString,
+            domain as CFString,
+            kCFPreferencesCurrentUser,
+            kCFPreferencesAnyHost
+        )
+    }
+
+    private static func setPreferenceValue(_ value: CFPropertyList?, in domain: String) {
+        CFPreferencesSetValue(
+            preferenceKey as CFString,
+            value,
+            domain as CFString,
+            kCFPreferencesCurrentUser,
+            kCFPreferencesAnyHost
+        )
+        CFPreferencesSynchronize(
+            domain as CFString,
+            kCFPreferencesCurrentUser,
+            kCFPreferencesAnyHost
+        )
+    }
+
+    private static func notifyPreferenceChanges() {
+        changeNotifications.forEach { notificationName in
+            DistributedNotificationCenter.default().postNotificationName(
+                Notification.Name(notificationName),
+                object: nil,
+                userInfo: nil,
+                deliverImmediately: true
+            )
+        }
     }
 }
 
