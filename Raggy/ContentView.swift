@@ -19,15 +19,9 @@ struct PermissionView: View {
 
                 actions
             }
-            .padding(30)
-            .frame(width: 560)
-            .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 8, style: .continuous))
-            .overlay {
-                RoundedRectangle(cornerRadius: 8, style: .continuous)
-                    .strokeBorder(.white.opacity(0.14), lineWidth: 1)
-            }
-            .shadow(color: .black.opacity(0.22), radius: 34, y: 18)
-            .padding(26)
+            .frame(maxWidth: 560, alignment: .leading)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+            .padding(40)
         }
         .frame(minWidth: 620, minHeight: 420)
     }
