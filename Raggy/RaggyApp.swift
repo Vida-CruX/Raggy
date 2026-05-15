@@ -20,7 +20,7 @@ struct RaggyApp: App {
                         controller.stopCleaningMode()
                     }
                 } else {
-                    PermissionView(
+                    PermissionWindowView(
                         onRequestPermission: controller.requestAccessibilityPermission,
                         onCheckPermission: controller.refreshAccessibilityPermission,
                         onQuit: controller.quit

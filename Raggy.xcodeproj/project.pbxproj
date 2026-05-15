@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		0C7EEBA52BD646A0004AF1F0 /* RaggyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7EEBA42BD646A0004AF1F0 /* RaggyApp.swift */; };
-		0C7EEBA72BD646A0004AF1F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7EEBA62BD646A0004AF1F0 /* ContentView.swift */; };
 		0C7EEBA92BD646A1004AF1F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C7EEBA82BD646A1004AF1F0 /* Assets.xcassets */; };
 		0C7EEBAC2BD646A1004AF1F0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C7EEBAB2BD646A1004AF1F0 /* Preview Assets.xcassets */; };
+		C0D3F0032BD8000000000001 /* PermissionWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D3F0052BD8000000000001 /* PermissionWindowView.swift */; };
+		C0D3F0042BD8000000000001 /* CleaningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D3F0062BD8000000000001 /* CleaningView.swift */; };
 		C0D3F0022BD8000000000001 /* RaggyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D3F0012BD8000000000001 /* RaggyViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0C7EEBA12BD646A0004AF1F0 /* Raggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Raggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C7EEBA42BD646A0004AF1F0 /* RaggyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaggyApp.swift; sourceTree = "<group>"; };
-		0C7EEBA62BD646A0004AF1F0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0C7EEBA82BD646A1004AF1F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C7EEBAB2BD646A1004AF1F0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0C7EEBAD2BD646A1004AF1F0 /* Raggy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Raggy.entitlements; sourceTree = "<group>"; };
 		C0D3F0012BD8000000000001 /* RaggyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaggyViewModel.swift; sourceTree = "<group>"; };
+		C0D3F0052BD8000000000001 /* PermissionWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionWindowView.swift; sourceTree = "<group>"; };
+		C0D3F0062BD8000000000001 /* CleaningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleaningView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,13 +55,14 @@
 		};
 		0C7EEBA32BD646A0004AF1F0 /* Raggy */ = {
 			isa = PBXGroup;
-			children = (
-				0C7EEBA42BD646A0004AF1F0 /* RaggyApp.swift */,
-				C0D3F0012BD8000000000001 /* RaggyViewModel.swift */,
-				0C7EEBA62BD646A0004AF1F0 /* ContentView.swift */,
-				0C7EEBA82BD646A1004AF1F0 /* Assets.xcassets */,
-				0C7EEBAD2BD646A1004AF1F0 /* Raggy.entitlements */,
-				0C7EEBAA2BD646A1004AF1F0 /* Preview Content */,
+				children = (
+					0C7EEBA42BD646A0004AF1F0 /* RaggyApp.swift */,
+					C0D3F0012BD8000000000001 /* RaggyViewModel.swift */,
+					C0D3F0052BD8000000000001 /* PermissionWindowView.swift */,
+					C0D3F0062BD8000000000001 /* CleaningView.swift */,
+					0C7EEBA82BD646A1004AF1F0 /* Assets.xcassets */,
+					0C7EEBAD2BD646A1004AF1F0 /* Raggy.entitlements */,
+					0C7EEBAA2BD646A1004AF1F0 /* Preview Content */,
 			);
 			path = Raggy;
 			sourceTree = "<group>";
@@ -142,7 +145,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C7EEBA72BD646A0004AF1F0 /* ContentView.swift in Sources */,
+				C0D3F0032BD8000000000001 /* PermissionWindowView.swift in Sources */,
+				C0D3F0042BD8000000000001 /* CleaningView.swift in Sources */,
 				0C7EEBA52BD646A0004AF1F0 /* RaggyApp.swift in Sources */,
 				C0D3F0022BD8000000000001 /* RaggyViewModel.swift in Sources */,
 			);
