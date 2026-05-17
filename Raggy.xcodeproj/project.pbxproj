@@ -3,16 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0C7EEBA52BD646A0004AF1F0 /* RaggyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7EEBA42BD646A0004AF1F0 /* RaggyApp.swift */; };
 		0C7EEBA92BD646A1004AF1F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C7EEBA82BD646A1004AF1F0 /* Assets.xcassets */; };
 		0C7EEBAC2BD646A1004AF1F0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C7EEBAB2BD646A1004AF1F0 /* Preview Assets.xcassets */; };
+		C0D3F0022BD8000000000001 /* RaggyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D3F0012BD8000000000001 /* RaggyViewModel.swift */; };
 		C0D3F0032BD8000000000001 /* PermissionWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D3F0052BD8000000000001 /* PermissionWindowView.swift */; };
 		C0D3F0042BD8000000000001 /* CleaningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D3F0062BD8000000000001 /* CleaningView.swift */; };
-		C0D3F0022BD8000000000001 /* RaggyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D3F0012BD8000000000001 /* RaggyViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +25,21 @@
 		C0D3F0052BD8000000000001 /* PermissionWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionWindowView.swift; sourceTree = "<group>"; };
 		C0D3F0062BD8000000000001 /* CleaningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleaningView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0C5305802FB955FD00D6D254 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				local.xcconfig,
+				shared.xcconfig,
+			);
+			target = 0C7EEBA02BD646A0004AF1F0 /* Raggy */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		0C53057C2FB955BE00D6D254 /* Config */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (0C5305802FB955FD00D6D254 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Config; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0C7EEB9E2BD646A0004AF1F0 /* Frameworks */ = {
@@ -55,14 +70,15 @@
 		};
 		0C7EEBA32BD646A0004AF1F0 /* Raggy */ = {
 			isa = PBXGroup;
-				children = (
-					0C7EEBA42BD646A0004AF1F0 /* RaggyApp.swift */,
-					C0D3F0012BD8000000000001 /* RaggyViewModel.swift */,
-					C0D3F0052BD8000000000001 /* PermissionWindowView.swift */,
-					C0D3F0062BD8000000000001 /* CleaningView.swift */,
-					0C7EEBA82BD646A1004AF1F0 /* Assets.xcassets */,
-					0C7EEBAD2BD646A1004AF1F0 /* Raggy.entitlements */,
-					0C7EEBAA2BD646A1004AF1F0 /* Preview Content */,
+			children = (
+				0C53057C2FB955BE00D6D254 /* Config */,
+				0C7EEBA42BD646A0004AF1F0 /* RaggyApp.swift */,
+				C0D3F0012BD8000000000001 /* RaggyViewModel.swift */,
+				C0D3F0052BD8000000000001 /* PermissionWindowView.swift */,
+				C0D3F0062BD8000000000001 /* CleaningView.swift */,
+				0C7EEBA82BD646A1004AF1F0 /* Assets.xcassets */,
+				0C7EEBAD2BD646A1004AF1F0 /* Raggy.entitlements */,
+				0C7EEBAA2BD646A1004AF1F0 /* Preview Content */,
 			);
 			path = Raggy;
 			sourceTree = "<group>";
@@ -90,6 +106,9 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				0C53057C2FB955BE00D6D254 /* Config */,
+			);
 			name = Raggy;
 			productName = Raggy;
 			productReference = 0C7EEBA12BD646A0004AF1F0 /* Raggy.app */;
@@ -103,7 +122,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1530;
-				LastUpgradeCheck = 1530;
+				LastUpgradeCheck = 2650;
 				TargetAttributes = {
 					0C7EEBA02BD646A0004AF1F0 = {
 						CreatedOnToolsVersion = 15.3;
@@ -189,7 +208,9 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 93FS655XT4;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -213,6 +234,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -252,7 +274,9 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 93FS655XT4;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -269,6 +293,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
@@ -278,15 +303,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = Raggy/Raggy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Raggy/Preview Content\"";
-				DEVELOPMENT_TEAM = 93FS655XT4;
+				DEVELOPMENT_TEAM = 6326L59TL6;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Raggy;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -305,15 +334,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = Raggy/Raggy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Raggy/Preview Content\"";
-				DEVELOPMENT_TEAM = 93FS655XT4;
+				DEVELOPMENT_TEAM = 6326L59TL6;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Raggy;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
